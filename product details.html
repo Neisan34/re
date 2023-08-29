@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nukeproof Giga 290 RS Details</title>
+    <link rel="stylesheet" href="path-to-your-styles.css">
+    <!-- Include Glide.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css">
+
+</head>
+<style>
+    /* Basic styling for the product details page */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .product-details {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .product-slider {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .product-info {
+        flex: 1;
+        padding: 0 20px;
+    }
+
+    .product-info h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .product-ratings {
+        color: gold;
+        margin-bottom: 10px;
+    }
+
+    .product-info h2 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .product-info p {
+        margin-top: 10px;
+    }
+
+    .add-to-cart-btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Additional styling for the Glide slider */
+    .glide__slide img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+    <!-- Your HTML content here -->
+    <div class="product-details">
+        <div class="product-slider">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <img src="NUKE 0.png" alt="Nukeproof Giga 290 RS">
+                        </li>
+                        <li class="glide__slide">
+                            <img src="NUKE2.png" alt="Nukeproof Giga 290 RS">
+                        </li>
+                        <li class="glide__slide">
+                            <img src="NUKE3.png" alt="Nukeproof Giga 290 RS">
+                        </li>
+                        <!-- Add more product slides as needed -->
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--prev" data-glide-dir="<">Previous</button>
+                    <button class="glide__arrow glide__arrow--next" data-glide-dir=">">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <h1>Nukeproof Giga 290 RS</h1>
+            <div class="product-ratings">
+                <!-- Add your rating stars here -->
+            </div>
+            <h2>Details:</h2>
+            <p>Category: Enduro, Material: Carbon, Wheel: 29", Front: 180mm, Back: 170mm, Warranty: 5 Years (Frame)</p>
+            <h2>Price: $8828.94</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus lacinia ligula non laoreet. Nulla facilisi. Fusce non diam nec lectus pharetra sodales. Vivamus vulputate, ex in tincidunt tristique, arcu odio malesuada justo, eu varius libero odio a lectus.</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+    <!-- Include Glide.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            perView: 1,
+            focusAt: 'center',
+            autoplay: 5000,
+            animationDuration: 800
+        }).mount();
+    </script>
+</body>
+</html>

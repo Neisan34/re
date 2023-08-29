@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+</head>
+<body>
+    <input type="text" id="product-search" placeholder="Search for a product...">
+    <div class="row">
+        <!-- BOX 1 -->
+        <div class="col-3 card product-box">
+            <img src="assets/img/best/evil1.jpg" alt="" class="product-img">
+            <h2 class="product-title text-dark">Evil Following LS</h2>
+            <div class="small-ratings">
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+            </div>
+            <h5><b>Details:</b></h5>
+            <p>Category: Trail X, Material: Carbon, Wheel: 29", Front: 130mm, Back: 121mm, Warranty: Lifetime (Frame)</p>
+            <span class="product-price">$8828.94</span>
+            <i class="btn btn-primary add-cart m-1">Add to <i class="fa-solid fa-cart-shopping"></i></i>
+        </div>
+        <!-- BOX 2 -->
+        <div class="col-4 card product-box" data-product="Nukeproof Giga 290 RS">
+            <img src="assets/img/best/nuke1.jpg" alt="" class="product-img">
+            <h2 class="product-title text-dark">Nukeproof Giga 290 RS</h2>
+            <div class="small-ratings">
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+            </div>
+            <h5><b>Details:</b></h5>
+            <p>Category: Enduro, Material: Carbon, Wheel: 29", Front: 180mm, Back: 170mm, Warranty: 5 Years (Frame)</p>
+            <span class="product-price">$8828.94</span>
+            <i class="btn btn-primary add-cart m-1">Add to <i class="fa-solid fa-cart-shopping"></i></i>
+        </div>
+        <!-- BOX 3 -->
+        <div class="col-4 card product-box" data-product="Santa Cruz Blur Carbon CC">
+            <img src="assets/img/best/cruz1.jpg" alt="" class="product-img">
+            <h2 class="product-title text-dark">Santa Cruz Blur Carbon CC</h2>
+            <div class="small-ratings">
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+                <i class="fa fa-star rating-color"></i>
+            </div>
+            <h5><b>Details:</b></h5>
+            <p>Category: XC, Material: Carbon CC, Wheel: 29", Front: 100mm, Back: 100mm, Warranty: 5 Years (Frame)</p>
+            <span class="product-price">$8828.94</span>
+            <i class="btn btn-primary add-cart m-1">Add to <i class="fa-solid fa-cart-shopping"></i></i>
+        </div>
+    </div>
+
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+            const productSearch = document.getElementById("product-search");
+            const productBoxes = document.querySelectorAll(".product-box");
+
+            productSearch.addEventListener("input", function() {
+                const searchTerm = productSearch.value.toLowerCase();
+                let foundItems = false;
+
+                productBoxes.forEach(function(box) {
+                    const productName = box.querySelector(".product-title").textContent.toLowerCase();
+
+                    if (productName.includes(searchTerm)) {
+                        box.style.display = "block";
+                        foundItems = true;
+                    } else {
+                        box.style.display = "none";
+                    }
+                });
+
+                if (!foundItems) {
+                    alert("No items found.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
